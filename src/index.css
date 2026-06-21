@@ -134,7 +134,7 @@
   }
 
   .nav-tab-inactive {
-    @apply text-slate-400 hover:text-white hover:bg-white/8;
+    @apply text-slate-400 hover:text-white hover:bg-white/10;
   }
 
   /* Badge */
@@ -174,8 +174,13 @@
 
   /* Card list item */
   .card-list-item {
-    @apply flex items-start gap-3 p-4 rounded-xl bg-white/4 border border-white/8
-           hover:bg-white/6 hover:border-white/14 transition-all duration-200;
+    @apply flex items-start gap-3 p-4 rounded-xl transition-all duration-200;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .card-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.14);
   }
 
   /* Score ring */
@@ -208,12 +213,11 @@
   }
   .animate-fade-in { animation: fadeIn 0.5s ease-out; }
   .animate-slide-up { animation: slideUp 0.4s ease-out; }
-  .hover\:bg-white\/8:hover { background-color: rgba(255,255,255,0.08); }
-  .bg-white\/4 { background-color: rgba(255,255,255,0.04); }
-  .bg-white\/8 { background-color: rgba(255,255,255,0.08); }
-  .border-white\/8 { border-color: rgba(255,255,255,0.08); }
-  .border-white\/14 { border-color: rgba(255,255,255,0.14); }
-  .hover\:bg-white\/6:hover { background-color: rgba(255,255,255,0.06); }
+  /* bg-surface helpers — defined as plain CSS to avoid Tailwind PostCSS conflicts */
+  .bg-surface-faint { background-color: rgba(255, 255, 255, 0.04); }
+  .bg-surface-subtle { background-color: rgba(255, 255, 255, 0.08); }
+  .border-surface-faint { border-color: rgba(255, 255, 255, 0.08); }
+  .border-surface-muted { border-color: rgba(255, 255, 255, 0.14); }
 }
 
 /* ─── Keyframes ─────────────────────────────────────────── */

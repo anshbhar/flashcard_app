@@ -120,12 +120,6 @@ const IconTrophy = () => (
   </svg>
 )
 
-const IconGlobe = () => (
-  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-  </svg>
-)
 
 const IconMail = () => (
   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -147,7 +141,7 @@ const IconUser = () => (
 function Header({ mode, onModeChange, totalCards }) {
   return (
     <header className="sticky top-0 z-40 w-full">
-      <div className="glass border-b border-white/8">
+      <div className="glass border-b border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2.5 shrink-0">
@@ -160,7 +154,7 @@ function Header({ mode, onModeChange, totalCards }) {
           </div>
 
           {/* Nav */}
-          <nav className="flex items-center gap-1 bg-white/5 rounded-xl p-1 border border-white/8" role="navigation" aria-label="App modes">
+          <nav className="flex items-center gap-1 bg-white/5 rounded-xl p-1 border border-white/10" role="navigation" aria-label="App modes">
             <button
               id="nav-study"
               className={`nav-tab ${mode === 'study' || mode === 'summary' ? 'nav-tab-active' : 'nav-tab-inactive'}`}
@@ -418,7 +412,7 @@ function SessionSummary({ cards, results, onReset }) {
 
       {/* Stats grid */}
       <div className="grid grid-cols-3 gap-3 sm:gap-4">
-        <div className="glass rounded-xl p-4 text-center border border-white/8">
+        <div className="glass rounded-xl p-4 text-center border border-white/10">
           <p className="font-display font-black text-3xl text-white">{total}</p>
           <p className="text-slate-400 text-xs mt-1">Total</p>
         </div>
@@ -470,7 +464,7 @@ function SessionSummary({ cards, results, onReset }) {
         aria-label="Reset and restart the study session"
       >
         <IconRotate />
-        Reset &amp; Restart Session
+        Reset & Restart Session
       </button>
     </section>
   )
@@ -627,7 +621,7 @@ function ManageDeck({ cards, onAdd, onDelete }) {
 function Footer() {
   return (
     <footer className="mt-auto w-full" role="contentinfo">
-      <div className="glass border-t border-white/8">
+      <div className="glass border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-5">
           {/* Top row: dev info + DH badge */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -668,7 +662,7 @@ function Footer() {
           </div>
 
           {/* Bottom row: app info */}
-          <div className="mt-4 pt-4 border-t border-white/6 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <div className="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2">
             <p className="text-slate-500 text-xs text-center sm:text-left">
               FlashMind — Active Recall Flashcard App · Zero cost · 100% localStorage persistence
             </p>
